@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .frame import div_frames, combine_frames
 from .cartoon import Cartoonizer
-from .face import extract_face
+# from .face import extract_face
 
 def mk_ccr(request, video):
 	if request.method != "POST":

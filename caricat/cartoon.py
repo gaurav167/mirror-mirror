@@ -36,7 +36,7 @@ class Cartoonizer:
         # -- STEPS 2 and 3 --
         # convert to grayscale and apply median blur
         # img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
-        img_blur = cv2.medianBlur(img_gray, 3)
+        img_blur = cv2.medianBlur(img_rgb, 3)
         # cv2.imshow("grayscale+median blur",img_color)
         # cv2.waitKey(0)
         # -- STEP 4 --

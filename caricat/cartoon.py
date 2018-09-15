@@ -49,7 +49,7 @@ class Cartoonizer:
 
         # -- STEP 5 --
         # convert back to color so that it can be bit-ANDed with color image
-        (x,y,z) = img_color.shape
+        # (x,y,z) = img_color.shape
 #       img_edge = cv2.resize(img_edge,(y,x)) 
         # img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2RGB)
         # cv2.imwrite("edge.png",img_edge)

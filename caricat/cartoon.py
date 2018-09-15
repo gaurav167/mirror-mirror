@@ -41,18 +41,19 @@ class Cartoonizer:
         # cv2.waitKey(0)
         # -- STEP 4 --
         # detect and enhance edges
-        img_edge = cv2.adaptiveThreshold(img_blur, 255,
-                                         cv2.ADAPTIVE_THRESH_MEAN_C,
-                                         cv2.THRESH_BINARY, 9, 2)
+#        img_edge = cv2.adaptiveThreshold(img_blur, 255,
+#                                         cv2.ADAPTIVE_THRESH_MEAN_C,
+#                                         cv2.THRESH_BINARY, 9, 2)
         # cv2.imshow("edge",img_edge)
         # cv2.waitKey(0)
 
         # -- STEP 5 --
         # convert back to color so that it can be bit-ANDed with color image
         (x,y,z) = img_color.shape
-        img_edge = cv2.resize(img_edge,(y,x)) 
+#       img_edge = cv2.resize(img_edge,(y,x)) 
         # img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2RGB)
         # cv2.imwrite("edge.png",img_edge)
+        img_edge = img_color
         # cv2.imshow("step 5", img_edge)
         # cv2.waitKey(0)
         #img_edge = cv2.resize(img_edge,(i for i in img_color.shape[:2]))

@@ -1,5 +1,6 @@
 Django==1.11
 dlib==19.15.0
+gunicorn==19.9.0
 imutils==0.5.1
 nltk==3.3
 numpy==1.15.1

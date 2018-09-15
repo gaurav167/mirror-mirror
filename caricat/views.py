@@ -23,13 +23,23 @@ def mk_ccr(request, video):
 
 
 def aud_resp(request):
+	if request.method != "POST":
+		return HttpResponse("Only available via POST")
+	inp = list(request.POST["input"].strip().split(' '))
 	# dont smoke
-
+	if "smoke" in inp:
+		return JsonResponse({"status":200, "message": "This is very bad."}, safe=False)
 	# ate unhealthy
-
+	if "junk" in inp or "pizza" in inp or "burger" in inp:
+		return JsonResponse({"status":200, "message": "This is very bad."}, safe=False)
 	# didnt exercise
-
+	if "skip" in inp or "exercise" in inp:
+		return JsonResponse({"status":200, "message": "This is very bad."}, safe=False)
 	# missed medicines
-
+	if "miss" in inp:
+		return JsonResponse({"status":200, "message": "This is very bad."}, safe=False)
 	# stressed out/drank
-	pass
+	if "stress" in inp:
+		return JsonResponse({"status":200, "message": "This is very bad."}, safe=False)
+
+	return JsonResponse({"status":200, "message":"Good Boy!"}, safe=False)

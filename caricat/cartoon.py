@@ -35,7 +35,7 @@ class Cartoonizer:
         # cv2.waitKey(0)
         # -- STEPS 2 and 3 --
         # convert to grayscale and apply median blur
-        img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
+        # img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
         img_blur = cv2.medianBlur(img_gray, 3)
         # cv2.imshow("grayscale+median blur",img_color)
         # cv2.waitKey(0)
@@ -51,7 +51,7 @@ class Cartoonizer:
         # convert back to color so that it can be bit-ANDed with color image
         (x,y,z) = img_color.shape
         img_edge = cv2.resize(img_edge,(y,x)) 
-        img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2RGB)
+        # img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2RGB)
         # cv2.imwrite("edge.png",img_edge)
         # cv2.imshow("step 5", img_edge)
         # cv2.waitKey(0)
